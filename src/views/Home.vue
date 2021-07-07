@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Youar Vue.js + TypeScript App" />
+    <a-button type="primary">
+      <template #icon><SearchOutlined /></template>
+      Search
+    </a-button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue';
+import { defineComponent } from "vue";
+import { SearchOutlined } from "@ant-design/icons-vue";
 
 export default defineComponent({
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld,
-  },
+    SearchOutlined
+  }
 });
 </script>

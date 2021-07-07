@@ -1,11 +1,18 @@
-import { createApp } from 'vue';
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
+import { createApp } from "vue";
+import { Button } from "ant-design-vue";
 // files
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import './main.css';
+import "ant-design-vue/dist/antd.css";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import "./main.css";
 
-createApp(App)
+const app = createApp(App)
   .use(store)
-  .use(router)
-  .mount('#app');
+  .use(router);
+
+// app.config.productionTip = false;
+app.use(Button);
+app.mount("#app");
